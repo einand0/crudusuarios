@@ -3,13 +3,13 @@
 API REST desenvolvida com Spring Boot para gerenciamento de usuários, aplicando boas práticas de arquitetura em camadas, uso de DTOs, Mapper e tratamento global de exceções.
 
 ### 🚀 Funcionalidades
-Criar usuário
-Listar todos os usuários
-Buscar usuário por ID
-Atualizar usuário
-Deletar usuário
-Validação de e-mail único
-Tratamento de erros personalizados
+- Criar usuário
+- Listar todos os usuários
+- Buscar usuário por ID
+- Atualizar usuário
+- Deletar usuário
+- Validação de e-mail único
+- Tratamento de erros personalizados
 
 ### 🧱 Arquitetura
 
