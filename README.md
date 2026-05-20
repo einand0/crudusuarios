@@ -10,7 +10,8 @@ Atualizar usuário
 Deletar usuário
 Validação de e-mail único
 Tratamento de erros personalizados
-🧱 Arquitetura
+
+### 🧱 Arquitetura
 
 Controller → Service → Repository → Database
 
