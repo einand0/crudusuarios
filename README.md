@@ -25,6 +25,7 @@ DTOs são utilizados para entrada e saída de dados, evitando exposição da Ent
 - Bean Validation
 - Lombok
 - H2
+- Swagger
 
 ### 📡 Endpoints
 
