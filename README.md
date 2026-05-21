@@ -73,3 +73,19 @@ DTOs são utilizados para entrada e saída de dados, evitando exposição da Ent
 `git clone https://github.com/seu-usuario/repo.git
 cd crud-usuarios
 ./mvnw spring-boot:run`
+
+### Swagger
+
+A API possui documentação interativa utilizando Swagger/OpenAPI, permitindo visualizar e testar os endpoints diretamente pelo navegador.
+
+Após iniciar a aplicação, acesse:
+
+http://localhost:8080/swagger-ui/index.html
+Recursos implementados
+Organização dos endpoints com @Tag
+Documentação detalhada com @Operation
+Responses HTTP documentadas
+Exemplos de dados nos DTOs utilizando @Schema
+Descrição de parâmetros utilizando @Parameter
+
+O Swagger foi utilizado para tornar a API mais intuitiva, facilitando o consumo e entendimento dos endpoints.
