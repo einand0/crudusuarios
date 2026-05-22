@@ -64,6 +64,14 @@ DTOs são utilizados para entrada e saída de dados, evitando exposição da Ent
 
 `DELETE /users/{id}`
 
+**Listar usuários com paginação**
+
+`GET /users/paginacao?page=0&size=10`
+
+**Parâmetros**
+- `page` → número da página
+- `size` → quantidade de registros por página
+
 ### ⚠️ Regras
 - Email deve ser único
 - Usuário inexistente retorna erro 404
