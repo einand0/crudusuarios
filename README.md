@@ -10,6 +10,7 @@ API REST desenvolvida com Spring Boot para gerenciamento de usuários, aplicando
 - Deletar usuário
 - Validação de e-mail único
 - Tratamento de erros personalizados
+- Paginação na busca de usuários
 
 ### 🧱 Arquitetura
 
