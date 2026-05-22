@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,6 +30,7 @@ public class UserController {
         this.userService = userService;
     }
 
+    // POST - CRIAR USUARIO
     @Operation(summary = "Criar um usuário",
                 description = "Endpoint responsável por cadastrar um novo usuário")
     @ApiResponses(value = {
@@ -43,6 +45,7 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(user);
     }
 
+    // GET - BUSCAR TODOS OS USUARIOS
     @Operation(summary = "Buscar todos os usuários",
                 description = "Endpoint responsável por buscar todos os usuários cadastrados")
     @ApiResponses(value = {
@@ -54,6 +57,14 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.OK).body(userService.getAllUsers());
     }
 
+    // GET - BUSCAR TODOS OS USUÁRIOS COM PAGINAÇÃO
+    @GetMapping("/paginacao")
+    public ResponseEntity<Page<UserResponseDTO>> findAllPaginacao(@RequestParam("page") int page, @RequestParam("size") int size){
+        return ResponseEntity.ok().body(userService.findAllPaginacao(page, size));
+    }
+
+
+    // GET - BUSCAR USUÁRIO PELO ID
     @Operation(summary = "Buscar o usuário pelo ID",
                 description = "Endpoint responsável por buscar um usuário pelo ID")
     @ApiResponses(value = {
@@ -65,6 +76,7 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.OK).body(userService.getUserById(id));
     }
 
+    // DELETE - DELETAR USUÁRIO
     @Operation(summary = "Deletar o usuário pelo ID",
                 description = "Endpoint responsável por deletar um usuário pelo ID")
     @ApiResponses(value = {
@@ -78,6 +90,7 @@ public class UserController {
         return ResponseEntity.noContent().build();
     }
 
+    // PUT - ALTERAR DADOS DO USUÁRIO
     @Operation(summary = "Alterar os dados do usuário",
                 description = "Endpoint responsável por alterar os dados do usuário")
     @ApiResponses(value = {
